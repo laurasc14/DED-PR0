@@ -6,7 +6,7 @@ import org.junit.Before;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
-public class PR0Array {
+public class PR0ArrayTest {
 
     PR0Array pr0Array;
 
@@ -15,7 +15,7 @@ public class PR0Array {
         this.pr0Array = new PR0Array();
 
         assertNotNull(this.pr0Array.getArray());
-    }
+}
 
     @After
     public void release(){
@@ -44,11 +44,12 @@ public class PR0Array {
         assertEquals(-1, index);
 
         index = this.pr0Array.getIndexOf(14);
-        assertEquals(-1, index);
+        assertEquals(7, index);
 
         index = this.pr0Array.getIndexOf(48);
-        assertEquals(-1, index);
+        assertEquals(24, index);
     }
+
 
     @org.junit.Test
     public void binarySearchArray(){
